@@ -1,6 +1,6 @@
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
         decimal = int(a,2) + int(b,2)
-        binary = bin(decimal)
-        # return (bin(decimal)[2:])
-        return binary[2:]
+        # binary = bin(decimal)
+        # return binary[2:]
+        return (bin(decimal)[2:])
