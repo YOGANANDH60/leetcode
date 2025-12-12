@@ -8,7 +8,6 @@ class Solution {
         ans[1] = end; 
 
         return ans;
- 
     }
     int search(int[] nums,int target, boolean findstartindex){
         int ans = -1;
