@@ -12,15 +12,14 @@ class Solution:
 
         while(s<=e):
             mid  = s+(e-s)// 2
+            res  = guess(mid)
 
-            if(guess(mid) == 0):
+            if(res == 0):
                 return mid
             
-            elif(guess(mid) == -1):
+            elif(res == -1):
                 e = mid -1
-            
             else:
                 s = mid + 1
             
-        
         return -1
