@@ -2,8 +2,9 @@ class Solution:
     def maxFreqSum(self, s: str) -> int:
         vfreq = {}
         cfreq = {}
-        for i in s:
-            if i.lower() in 'aeiou':
+        ch = s.lower()
+        for i in ch:
+            if i in 'aeiou':
                 vfreq[i] = vfreq.get(i,0) + 1
             else:
                 cfreq[i] = cfreq.get(i,0) + 1
