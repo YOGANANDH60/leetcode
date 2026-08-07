@@ -4,7 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        nums = sorted(nums)
+        nums.sort()
         i = 0
         j = len(nums) - 1
         m = 0
