@@ -1,17 +1,17 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-        def get_next(num: int) -> int:
+        seen = set()
+
+        while n != 1 and n not in seen:
+            seen.add(n)
+
             total = 0
-            while num > 0:
-                num, digit = divmod(num, 10)
+
+            while n > 0:
+                digit = n % 10
                 total += digit ** 2
-            return total
+                n //= 10
 
-        slow = n
-        fast = get_next(n)
+            n = total
 
-        while fast != 1 and slow != fast:
-            slow = get_next(slow)
-            fast = get_next(get_next(fast))
-
-        return fast == 1
+        return n == 1
