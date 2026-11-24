@@ -19,5 +19,6 @@ class Solution:
                 l = math.lcm(l, nums[j])
                 if prod == g * l:
                     ans = max(ans, j - i + 1)
-                
+                if prod > max_p:
+                    break
         return ans
